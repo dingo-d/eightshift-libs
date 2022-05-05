@@ -6,7 +6,7 @@
 >
 	<title>Eightshift Libs</title>
 	<paths>
-		<output>docs/.build</output>
+		<output>docs/phpdocs</output>
 	</paths>
 
 	<version number="3.0.0">
