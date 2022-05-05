@@ -8,12 +8,12 @@
     <transformation writer="twig" source="/index.html.twig" artifact="index.html"/>
     <transformation writer="twig" query="files" source="/file.html.twig" />
     <transformation writer="sourcecode" query="files" source="/source/file.source.txt.twig" artifact="files/{{path}}.txt" />
-    <transformation writer="twig" query="/indexes.namespaces" source="/namespace.html.twig" />
-    <transformation writer="twig" query="/indexes.packages" source="/package.html.twig" />
-    <transformation writer="twig" query="/indexes.classes" source="/class.html.twig" />
-    <transformation writer="twig" query="/indexes.enums" source="/enum.html.twig" />
-    <transformation writer="twig" query="/indexes.interfaces" source="/interface.html.twig" />
-    <transformation writer="twig" query="/indexes.traits" source="/trait.html.twig" />
+    <transformation writer="twig" query="indexes.namespaces" source="/namespace.html.twig" />
+    <transformation writer="twig" query="indexes.packages" source="/package.html.twig" />
+    <transformation writer="twig" query="indexes.classes" source="/class.html.twig" />
+    <transformation writer="twig" query="indexes.enums" source="/enum.html.twig" />
+    <transformation writer="twig" query="indexes.interfaces" source="/interface.html.twig" />
+    <transformation writer="twig" query="indexes.traits" source="/trait.html.twig" />
     <transformation writer="twig" source="/search.js.twig" artifact="js/search.js" />
     <transformation writer="twig" source="/searchIndex.js.twig" artifact="js/searchIndex.js" />
     <transformation writer="twig" source="/reports/errors.html.twig" artifact="reports/errors.html" />

@@ -98,10 +98,10 @@ a:hover,
 .phpdocumentor-header,
 .phpdocumentor-sidebar__menu-button,
 .phpdocumentor-sidebar__menu-icon,
-#packages,
-.phpdocumentor-table-of-contents,
-#namespaces,
-#toc,
+/* #packages, */
+/* .phpdocumentor-table-of-contents, */
+/* #namespaces,
+#toc, */
 .headerlink {
 	display: none;
 }
@@ -253,21 +253,21 @@ code {
 	line-height: 1.5;
 }
 
-.phpdocumentor-signature__visibility,
-.phpdocumentor-signature__response_type {
+code .phpdocumentor-signature__visibility,
+code .phpdocumentor-signature__response_type {
 	color: rgb(255, 121, 198);
 }
 
-.phpdocumentor-signature__name {
-	color: #369;
+code .phpdocumentor-signature__name {
+	color: #74BAFF;
 }
 
-.phpdocumentor-signature__argument__return-type {
-	color: #693;
+code .phpdocumentor-signature__argument__return-type {
+	color: #8FC15C;
 }
 
-.phpdocumentor-signature__argument__name {
-	color: #369
+code .phpdocumentor-signature__argument__name {
+	color: #74BAFF
 }
 
 p,
@@ -283,4 +283,15 @@ p,
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid var(--global-colors-cararra);
+	font-size: var(--global-font-size-small);
+}
+
+.phpdocumentor-breadcrumbs {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.phpdocumentor-breadcrumbs li {
+	margin-right: 25px;
+	display: inline-block;
 }
