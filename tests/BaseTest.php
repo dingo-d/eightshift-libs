@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Tests;
 
+use Brain\Monkey;
 use Brain\Monkey\Functions;
 use Exception;
 use Mockery\MockInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use Yoast\WPTestUtils\BrainMonkey\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class BaseTest extends TestCase
 {
@@ -17,10 +18,11 @@ class BaseTest extends TestCase
 
 	protected function set_up()
 	{
-		parent::set_up();
+		parent::setUp();
+		Monkey\setUp();
 
-		$this->stubTranslationFunctions();
-		$this->stubEscapeFunctions();
+		Functions\stubTranslationFunctions();
+		Functions\stubEscapeFunctions();
 
 		// Mock the template dir location.
 		Functions\when('get_template_directory')->justReturn(\dirname(__FILE__) . \DIRECTORY_SEPARATOR . 'data');
@@ -154,8 +156,6 @@ class BaseTest extends TestCase
 
 	protected function tear_down()
 	{
-		parent::tear_down();
-
 		$this->deleteCliOutput();
 
 		for ($i = 1; $i <= 10; $i++) {
@@ -171,6 +171,9 @@ class BaseTest extends TestCase
 		$esBlocks = null;
 
 		unset($this->wpCliMock);
+
+		Monkey\tearDown();
+		parent::tearDown();
 	}
 
 	/**
